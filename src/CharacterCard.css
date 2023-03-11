@@ -1,0 +1,18 @@
+
+.image{
+    height: 4vw;
+    width: 4vw;
+}
+
+.image:hover{
+    cursor: pointer;
+}
+.image-container{
+    height: 8vw;
+    width: 8vw;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

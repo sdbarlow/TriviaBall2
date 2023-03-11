@@ -1,0 +1,114 @@
+.navbar3{
+    height: 5%;
+    width: 100%;
+    background-color: white;
+    }
+    
+    
+    .parent1{
+        height: 95%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #leaderboard{
+        height: 50vh;
+        width:40vw;
+        background-color: white;
+    }
+    
+    #list-container{
+        display: grid;
+        grid-template-areas:
+        'Main right'
+        'Main2 right2'
+        'Main3 right3'
+        'Main4 right4'
+        'Main5 right5'
+        'Main6 right6';
+        grid-template-columns: 25vw 25vw;
+        height: 95%;
+        width: 100%;
+    }
+
+    #troph{
+        display: inline;
+        margin-right: 2vw;
+    }
+    
+    
+    
+    .listitem1{
+        grid-area: Main;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem2{
+        grid-area: Main2;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem3{
+        grid-area: Main3;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem4{
+        grid-area: Main4;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem5{
+        grid-area: Main5;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem6{
+        grid-area: Main6;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem7{
+        grid-area: right;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem8{
+        grid-area: right2;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem9{
+        grid-area: right3;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem10{
+        grid-area: right4;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem11{
+        grid-area: right5;
+        text-align: left;
+        font-size: 1vw;
+    }
+    
+    .listitem12{
+        grid-area: right6;
+        text-align: left;
+        font-size: 1vw;
+    }

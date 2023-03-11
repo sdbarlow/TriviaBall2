@@ -1,0 +1,31 @@
+ul{
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+li{
+    float: left;
+    padding-left: 8vw;
+}
+
+
+.charIcon{
+    padding-left: 0;
+}
+
+.nes-mario{
+    transform: scale(0.3);
+}
+
+.links{
+    font-size: 1.2vw;;
+}

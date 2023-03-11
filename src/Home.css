@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+
+
+#sky{
+  height: 50%;
+  width:100%;
+  background: linear-gradient(#0282FE 12.5%, #0B8CFF 25%, #1893FD 37.5%, #2AA0FE 50%, #40AFFE 62.5%, #4DBDFF 75%, #71D4FF 87.5%, #7FE1FE 100% );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloud::after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    box-shadow:
+      33px 0 #e6e6e6,
+      40px 0 #e6e6e6,
+      48px 0 #e6e6e6,
+      56px 0 #e6e6e6,
+    
+      24px 8px #e6e6e6,
+      32px 8px white,
+      40px 8px white,
+      48px 8px white,
+      56px 8px white,
+      64px 8px #e6e6e6,
+      
+      16px 16px #e6e6e6,
+      24px 16px white,
+      32px 16px white,
+      40px 16px white,
+      48px 16px white,
+      56px 16px white,
+      64px 16px white,
+      72px 16px #e6e6e6,
+      
+      8px 24px #e6e6e6,
+      16px 24px white,
+      24px 24px white,
+      32px 24px white,
+      40px 24px white,
+      48px 24px white,
+      56px 24px white,
+      64px 24px white,
+      72px 24px white,
+      80px 24px #e6e6e6,
+      
+      0px 32px #e6e6e6,
+      8px 32px white,
+      16px 32px white,
+      24px 32px white,
+      32px 32px white,
+      40px 32px white,
+      48px 32px white,
+      56px 32px white,
+      64px 32px white,
+      72px 32px white,
+      80px 32px white,
+      88px 32px #e6e6e6,
+      
+      8px 40px #e6e6e6,
+      16px 40px #e6e6e6,
+      24px 40px #e6e6e6,
+      32px 40px #e6e6e6,
+      40px 40px #e6e6e6,
+      48px 40px #e6e6e6,
+      56px 40px #e6e6e6,
+      64px 40px #e6e6e6,
+      72px 40px #e6e6e6,
+      80px 40px #e6e6e6,
+      
+  } 
+
+  .cloud-1 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+  }
+  
+  .cloud-2 {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+  }
+  
+  
+  .cloud-3 {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+  }
+  
+  
+  .cloud-4 {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+  }
+
+
+#ground{
+  height: 50%;
+  width:100%;
+  background: linear-gradient(#2FD627 16.6%, #0BB203 33.2%, #00A101 49.8%, #008E02 66.4%, #017D01 83%, #004700 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test19{
+  font-size: 6vw;
+   font-family: 'game_overregular';
+   color: #017D01;
+   text-shadow: 1px 1px 0 black,
+        2px 2px 0 black,
+        3px 3px 0 black,
+        4px 4px 0 black,
+        5px 5px 0 black,
+        6px 6px 0 black,
+        7px 7px 0 black,
+        8px 8px 0 black,
+        9px 9px 0 black,
+        10px 10px 0 black,
+        11px 11px 0 black,
+        12px 12px 0 black,
+        -3px -3px 0 white,
+        15px 15px 0 white;
+    letter-spacing: .4rem;
+    text-align: center;
+  }
+
+
+  .test20{
+    font-size: 6vw;
+     font-family: 'game_overregular';
+     color: #017D01;
+     text-shadow: 1px 1px 0 black,
+          2px 2px 0 black,
+          3px 3px 0 black,
+          4px 4px 0 black,
+          5px 5px 0 black,
+          6px 6px 0 black,
+          7px 7px 0 black,
+          8px 8px 0 black,
+          9px 9px 0 black,
+          10px 10px 0 black,
+          11px 11px 0 black,
+          12px 12px 0 black,
+          -3px -3px 0 white,
+          15px 15px 0 white;
+      letter-spacing: .4rem;
+      text-align: center;
+    }
+
+    #helpmessage{
+        display: none;
+    }

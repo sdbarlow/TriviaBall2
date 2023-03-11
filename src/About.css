@@ -1,0 +1,92 @@
+.navbar4{
+    height: 5%;
+    width: 100%;
+    background-color: white;
+    }
+    
+    
+    .parent2{
+        height: 95%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #leaderboard1{
+        height: 50vh;
+        width:40vw;
+        background-color: white;
+    }
+    
+    #aboutcontainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #topheader{
+        font-size: 1.4vw;
+        grid-area: header;
+        text-align: center;
+        padding-bottom: 1vw;
+    }
+
+    #thelogos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .psuedopadding{
+        font-size: 1.4vw;
+        color: white;
+    }
+
+    #theimgs{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .imagelogos{
+        height: 5vw;
+        width: 5vw;
+        margin-left: 30px;
+    }
+    
+    #toowide{
+        height: 5vw;
+        width:4vw;
+    }
+
+    #toowide2{
+        height: 5vw;
+        width: 4vw;
+    }
+
+    #firstimg{
+        margin-left: 0;
+    }
+
+   #nesbadge{
+    height: 4vw;
+    width: 22vw;
+    padding-right: 10vw;
+    padding-top: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vw;
+   }
+
+   #bottomheader{
+    padding-top: 1vw;
+   }
+
+   #middleheader{
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+   }

@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+#header{
+    font-size: 2vw;
+text-align: center;
+color: black;
+padding-left: none;
+}
+
+#home{
+    color: black;
+    font-size: 1vw;
+}
+
+.navbar8{
+    height: 12%;
+    width: 100%;
+    background-color: white;
+    }
+
+
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 15%);
+    grid-auto-rows: 25%;
+    grid-gap: 5%;
+    justify-content: center;
+    align-content: center;
+    overflow: scroll;
+}
