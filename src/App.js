@@ -58,7 +58,7 @@ const [joystickBallStyle, setJoystickBallStyle] = useState({
 const fetchedQuestionsRef = useRef([]);
 
 useEffect(() => {
-  fetch("http://localhost:3000/characters")
+  fetch("https://triviaball-server.onrender.com/characters")
     .then(resp => resp.json())
     .then(data => {
       setCharacters(data)
@@ -78,7 +78,7 @@ useEffect(() => {
     setQuestionNumber(questionnumber + 1);
   } else if (shuffledQuestionIndexes.length > 0) {
     // fetch new question
-    fetch(`http://localhost:3000/Questions/${shuffledQuestionIndexes[questionnumber]}`)
+    fetch(`https://triviaball-server.onrender.com/Questions/${shuffledQuestionIndexes[questionnumber]}`)
       .then(resp => resp.json())
       .then(data => {
         setQuestion(data);
@@ -162,7 +162,7 @@ function handleJoystickClick(){
 }
 
 useEffect(() => {
-  fetch(`http://localhost:3000/characters/${number}`)
+  fetch(`https://triviaball-server.onrender.com/characters/${number}`)
       .then(resp => resp.json())
       .then(data => setPlayableCharacter(data.image)) 
 }, [number])
@@ -174,7 +174,7 @@ useEffect(() => {
 }
 
 function whenSubmit(val) {
-  fetch("http://localhost:3000/characters", {
+  fetch("https://triviaball-server.onrender.com/characters", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
