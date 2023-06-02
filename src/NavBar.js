@@ -2,13 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 import useSound from 'use-sound'
 import { Link } from 'react-router-dom'
-import click from './sounds/buttonClick.mp3'
 import './NavBar.css'
 
 
 function NavBar({Characters, playablecharacter}){
-
-    const [playClick] = useSound(click, { volume: 1 });
+    const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
 
     function handleClick(){
         playClick()

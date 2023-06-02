@@ -4,7 +4,6 @@ import { Routes, Route, useNavigate } from "react-router-dom"
 import { useRef } from 'react';
 import './App.css'
 import useSound from 'use-sound';
-import click from './sounds/buttonClick.mp3'
 import Home from './Home';
 import Profile from './Profile';
 import NavBar from './NavBar';
@@ -26,6 +25,7 @@ import GameField from './GameField';
 function App() {
   let navigate = useNavigate();
   const [count, setCount] = useState(0)
+  const click = new Audio('/buttonClick.mp3');
 
   const[number, setNumber] = useState(1);
   const[Characters, setCharacters] = useState([]);
@@ -114,7 +114,7 @@ function shuffle(array) {
 console.log(question)
 
 function handleJoystickClick(){
-  playClick()
+  click.play()
   if(joystickmoved){
  setJoystickStyle({
   height: '16vh',

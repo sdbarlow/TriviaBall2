@@ -4,11 +4,10 @@ import './Profile.css'
 import useSound from 'use-sound';
 import CharacterCard from "./CharacterCard";
 import { Link } from 'react-router-dom'
-import click from './sounds/buttonClick.mp3'
 
 function Profile({Characters, whenSubmit, handleClick, number}){
     const [value, setValue] = useState("")
-    const [playClick] = useSound(click, { volume: 1 });
+    const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
 
     const renderIcons = Characters.map((char)=> {return(<CharacterCard number={number} handleClick={handleClick} id={char.id} key={char.id} image={char.image}/>)})
 
