@@ -5,7 +5,7 @@ import './Leaderboard.css'
 import { Link } from 'react-router-dom'
 
 function Leaderboard(){
-  const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
+  const [playClick] = useSound(('./buttonClick.mp3'), { volume: 1 });
 
     return(<>
     <div onClick={playClick} className="navbar3"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>

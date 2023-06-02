@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 function About(){
 
-  const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
+  const [playClick] = useSound(('./buttonClick.mp3'), { volume: 1 });
 
     return (<>
         <div onClick={playClick} className="navbar4"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>
@@ -18,7 +18,7 @@ function About(){
         <div id="topheader">Created By Seth Barlow</div>
         <div id="thelogos"><a target="_blank" href="https://github.com/sdbarlow"><i class="nes-icon github is-medium"></i></a><p className="psuedopadding">dd</p><a target="_blank" href="https://medium.com/@sethdbarlow"><i class="nes-icon medium is-medium"></i></a><p className="psuedopadding">dd</p><a target="_blank" href="https://www.linkedin.com/in/sethdbarlow/"><i class="nes-icon linkedin is-medium"></i></a><p className="psuedopadding">dd</p><a target="_blank" href="mailto:sethdbarlow@gmail.com"><i class="nes-icon gmail is-medium"></i></a></div>
         <div id="middleheader">Languages Used</div>
-        <div id="theimgs" ><img id="firstimg" className='imagelogos' src="./images/HTML5.png"/><img id="toowide" className='imagelogos' src="./images/CSS.png"/><img className='imagelogos' src="./images/JavaScript.png"/><img id="toowide2" className='imagelogos' src="./images/React.png"/></div>
+        <div id="theimgs" ><img id="firstimg" className='imagelogos' src="../Images/HTML5.png"/><img id="toowide" className='imagelogos' src="../Images/CSS.png"/><img className='imagelogos' src="../Images/JavaScript.png"/><img id="toowide2" className='imagelogos' src="../Images/React.png"/></div>
         <div id="bottomheader">Framework Used</div>
         <div id="nesbadge"><a target="_blank" href="https://nostalgic-css.github.io/NES.css/#" class="nes-badge">
   <span class="is-success">NES.css</span>

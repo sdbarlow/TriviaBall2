@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 function Profile({Characters, whenSubmit, handleClick, number}){
     const [value, setValue] = useState("")
-    const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
+    const [playClick] = useSound(('./buttonClick.mp3'), { volume: 1 });
 
     const renderIcons = Characters.map((char)=> {return(<CharacterCard number={number} handleClick={handleClick} id={char.id} key={char.id} image={char.image}/>)})
 

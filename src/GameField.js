@@ -14,10 +14,10 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
  const[progressbar, setProgressBar] = useState(20)
  const[lossdetermine, setLossDetermine] = useState(false);
  const [playing, setPlaying] = useState(false);
- const [playWrong, { stop: stopWrong }] = useSound(('/wrongSelection.mp3'), { volume: 1 });
- const [playCorrect, { stop }] = useSound(('/correctSelection.mp3'), { volume: 1 });
- const [playWin] = useSound(('/gameWin.mp3'), { volume: 1 });
- const [playLose] = useSound(('/gameLose.mp3'), { volume: 1 });
+ const [playWrong, { stop: stopWrong }] = useSound(('./wrongSelection.mp3'), { volume: 1 });
+ const [playCorrect, { stop }] = useSound(('./correctSelection.mp3'), { volume: 1 });
+ const [playWin] = useSound(('./gameWin.mp3'), { volume: 1 });
+ const [playLose] = useSound(('./gameLose.mp3'), { volume: 1 });
 
 
 console.log(question)

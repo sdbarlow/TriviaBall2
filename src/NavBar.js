@@ -6,7 +6,7 @@ import './NavBar.css'
 
 
 function NavBar({Characters, playablecharacter}){
-    const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
+    const [playClick] = useSound(('./buttonClick.mp3'), { volume: 1 });
 
     function handleClick(){
         playClick()

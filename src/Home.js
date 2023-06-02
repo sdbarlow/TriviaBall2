@@ -5,7 +5,7 @@ import './Home.css'
 import { Link } from 'react-router-dom'
 
 function Home({NavBar, playablecharacter}){
-  const [playClick] = useSound(('/buttonClick.mp3'), { volume: 1 });
+  const [playClick] = useSound(('./buttonClick.mp3'), { volume: 1 });
 
   function handleClick(){
     playClick()

@@ -25,13 +25,12 @@ import GameField from './GameField';
 function App() {
   let navigate = useNavigate();
   const [count, setCount] = useState(0)
-  const click = new Audio('/buttonClick.mp3');
+  const click = new Audio('./buttonClick.mp3');
 
   const[number, setNumber] = useState(1);
   const[Characters, setCharacters] = useState([]);
   const[playablecharacter, setPlayableCharacter] = useState("")
   const[joystickmoved, setJoystickMoved] = useState(true)
-  const [playClick] = useSound(click, ({volume: 1}))
 
   const [question, setQuestion] = useState({});
 const [questionnumber, setQuestionNumber] = useState(0);
