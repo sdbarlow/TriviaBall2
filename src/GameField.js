@@ -1,7 +1,12 @@
 import React from 'react'
+import useSound from 'use-sound';
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './GameField.css'
+import wrong from './sounds/wrongSelection.mp3'
+import correct from './sounds/correctSelection.mp3'
+import gameWin from './sounds/gameWin.mp3'
+import gameLose from './sounds/gameLose.mp3'
 
 function GameField({ question, setQuestionNumber, questionnumber, playablecharacter }){
   const [timeRemaining, setTimeRemaining] = useState(12);
@@ -12,10 +17,25 @@ function GameField({ question, setQuestionNumber, questionnumber, playablecharac
  const[windetermine, setWinDetermine] = (useState(false))
  const[progressbar, setProgressBar] = useState(20)
  const[lossdetermine, setLossDetermine] = useState(false);
+ const [playing, setPlaying] = useState(false);
+ const [playWrong, { stop: stopWrong }] = useSound(wrong, { volume: 1 });
+ const [playCorrect, { stop }] = useSound(correct, { volume: 1 });
+ const [playWin] = useSound(gameWin, { volume: 1 });
+ const [playLose] = useSound(gameLose, { volume: 1 });
+
 
 console.log(question)
 
  const navigate = useNavigate();
+
+ const soundToPlay = (sound) => {
+  sound();
+  setPlaying(true);
+  setTimeout(() => {
+    stop();
+    setPlaying(false);
+  }, 1000);
+};
 
   useEffect(() => {
     if(characterposition === "92%"){
@@ -27,7 +47,7 @@ console.log(question)
     if(progressbar === 100){
     const timer = setTimeout(() => {
       navigate('/');
-    }, 2000);
+    }, 3000);
   
     return () => {
       clearTimeout(timer);
@@ -36,10 +56,12 @@ console.log(question)
 
 useEffect(() => {
   if(downtracker > 4 || characterposition == "-2%") {
+    stopWrong()
+    soundToPlay(playLose)
     setLossDetermine(!lossdetermine)
     const timer = setTimeout(() => {
       navigate('/');
-    }, 2000);
+    }, 3000);
   
     return () => {
       clearTimeout(timer);
@@ -83,18 +105,22 @@ useEffect(() => {
         setQuestionNumber(questionnumber+1)
         if(e.target.id === e.target.textContent){
           if(characterposition > "70.9%"){
+            soundToPlay(playWin);
             const initialPercentage = parseInt(characterposition); 
             const newPercentage = initialPercentage + 15;
             setCharacterPosition(`${newPercentage}%`);
             setProgressBar(progressbar + 10);
           }else{
+            soundToPlay(playCorrect);
             const initialPercentage = parseInt(characterposition); 
             const newPercentage = initialPercentage + 8;
             setCharacterPosition(`${newPercentage}%`);
             setProgressBar(progressbar + 10);
           }
         }else{
+            soundToPlay(playWrong);
             setDownTracker(downtracker + 1)
+
         }
       }
   

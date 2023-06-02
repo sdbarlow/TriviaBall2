@@ -1,11 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
+import useSound from 'use-sound'
 import './Leaderboard.css'
+import click from './sounds/buttonClick.mp3'
 import { Link } from 'react-router-dom'
 
 function Leaderboard(){
+
+  const [playClick] = useSound(click, { volume: 1 });
+
     return(<>
-    <div className="navbar3"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>
+    <div onClick={playClick} className="navbar3"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>
 <div className="parent1">
 <div id="leaderboard" class="nes-container with-title is-centered">
   <p className="title">Leaderboard</p>

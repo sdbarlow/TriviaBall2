@@ -1,9 +1,16 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
+import useSound from 'use-sound';
 import './Home.css'
 import { Link } from 'react-router-dom'
+import click from './sounds/buttonClick.mp3'
 
 function Home({NavBar, playablecharacter}){
+  const [playClick] = useSound(click, { volume: 1 });
+
+  function handleClick(){
+    playClick()
+  }
 
     return (
     <>
@@ -18,7 +25,7 @@ function Home({NavBar, playablecharacter}){
                 <span id="ball" className="test20">Ball</span></div>
                 <h3 id="helpmessage">Should be played on a larger screen!</h3>
              <div id="ground">
-                <Link to="/Gamefield"><button type="button" className="nes-btn is-primary">Start Game</button></Link>
+                <Link to="/Gamefield"><button type="button" onClick={handleClick} className="nes-btn is-primary">Start Game</button></Link>
              </div>
     </>
     )

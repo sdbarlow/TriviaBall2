@@ -1,11 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 import './Profile.css'
+import useSound from 'use-sound';
 import CharacterCard from "./CharacterCard";
 import { Link } from 'react-router-dom'
+import click from './sounds/buttonClick.mp3'
 
 function Profile({Characters, whenSubmit, handleClick, number}){
     const [value, setValue] = useState("")
+    const [playClick] = useSound(click, { volume: 1 });
 
     const renderIcons = Characters.map((char)=> {return(<CharacterCard number={number} handleClick={handleClick} id={char.id} key={char.id} image={char.image}/>)})
 
@@ -18,7 +21,7 @@ console.log(Characters.length)
     return(<>
         
     <div className="parent">
-    <div className="navbar8"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>
+    <div onClick={playClick} className="navbar8"><Link to="/"><a id="home" class="nes-btn" href="#">Back</a></Link></div>
         <span id="header" className="nes-text is-primary">Choose A Character</span>
         <div className="grid">
             {renderIcons}
@@ -28,8 +31,8 @@ console.log(Characters.length)
                         <p class="title">Enter An Image</p>
                         <textarea value={value} onChange={(e) => setValue(e.target.value)} id="textarea_field" class="nes-textarea"></textarea>
                         <menu class="dialog-menu">
-                            <button type="button" class="nes-btn">Cancel</button>
-                            <button type="submit" class="nes-btn is-primary">Confirm</button>
+                            <button onClick={playClick} type="button" class="nes-btn">Cancel</button>
+                            <button onClick={playClick} type="submit" class="nes-btn is-primary">Confirm</button>
                         </menu>
                         </form>
                     </dialog>

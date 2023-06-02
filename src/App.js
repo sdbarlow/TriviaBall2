@@ -3,12 +3,15 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from "react-router-dom"
 import { useRef } from 'react';
 import './App.css'
+import useSound from 'use-sound';
+import click from './sounds/buttonClick.mp3'
 import Home from './Home';
 import Profile from './Profile';
 import NavBar from './NavBar';
 import Leaderboard from './Leaderboard';
 import About from './About';
 import GameField from './GameField';
+
 
 
 // function shuffleArray(array) {
@@ -28,6 +31,7 @@ function App() {
   const[Characters, setCharacters] = useState([]);
   const[playablecharacter, setPlayableCharacter] = useState("")
   const[joystickmoved, setJoystickMoved] = useState(true)
+  const [playClick] = useSound(click, ({volume: 1}))
 
   const [question, setQuestion] = useState({});
 const [questionnumber, setQuestionNumber] = useState(0);
@@ -110,6 +114,7 @@ function shuffle(array) {
 console.log(question)
 
 function handleJoystickClick(){
+  playClick()
   if(joystickmoved){
  setJoystickStyle({
   height: '16vh',
